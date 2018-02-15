@@ -32,7 +32,7 @@ function determineConverter (clickEvent) {
 
 //clear input field
 removeMessage = () => {
-    inputTemp.value = 0;
+    inputTemp.value = "";
 }
 let inputTemp = document.getElementById("enterTemp");
 document.getElementById("clear").addEventListener("click", removeMessage);
