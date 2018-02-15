@@ -5,15 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Temperature Converter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
 </head>
-<body>
-    <h1>Convert Temperature</h1>
+<body id="overlay">
+    <h1>TEMPERATURE CONVERTER</h1>
     <!-- In the HTML, have one input field where someone can enter in a temperature. -->
     <input type="number" id="enterTemp"><br>
     <!-- Create a radio button group where Celsius or Fahrenheit can be selected as the scale that the number should be converted to. -->
-    <input id="cel" name="tempType" type="radio">CELCIUS</input>
-    <input id="far" name="tempType" type="radio">FARENHEIT</input>
+    <div class="radio-toolbar">
+        <input type="radio" id="cel" name="tempType" value="celsius">
+        <label for="cel">&#176;CELCIUS</label>
+        <input type="radio" id="far" name="tempType" value="farenheit">
+        <label for="far">&#176;FARENHEIT</label>
+    </div>
     <!-- Create a block level element that will hold the text of the converted temperature. -->
     <div id="outputTemp"></div>
     <!-- Create a button that, when clicked, displays the converted temperature. -->
