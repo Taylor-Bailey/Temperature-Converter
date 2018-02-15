@@ -30,3 +30,9 @@ function determineConverter (clickEvent) {
 // Assign a function to be executed when the button is clicked
 // button.addEventListener("click", determineConverter);
 
+//clear input field
+removeMessage = () => {
+    inputTemp.value = 0;
+}
+let inputTemp = document.getElementById("enterTemp");
+document.getElementById("clear").addEventListener("click", removeMessage);
