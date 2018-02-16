@@ -7,23 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
 </head>
-<body id="overlay">
+<body id="body">
     <h1>TEMPERATURE CONVERTER</h1>
-    <!-- In the HTML, have one input field where someone can enter in a temperature. -->
-    <input type="number" id="enterTemp"><br>
-    <!-- Create a radio button group where Celsius or Fahrenheit can be selected as the scale that the number should be converted to. -->
-    <div class="radio-toolbar">
-        <input type="radio" id="cel" name="tempType" value="celsius">
-        <label for="cel">&#176;CELCIUS</label>
-        <input type="radio" id="far" name="tempType" value="farenheit">
-        <label for="far">&#176;FARENHEIT</label>
-    </div>
-    <!-- Create a block level element that will hold the text of the converted temperature. -->
-    <div id="outputTemp"></div>
-    <!-- Create a button that, when clicked, displays the converted temperature. -->
-    <button id="display">CONVERT</button>
-    <!-- Create another button that, when clicked, clears any text in the input field. -->
-    <button id="clear">CLEAR INPUT</button>
-    <script src="converter.js"></script>
+    <!-- <form> -->
+        <input type="number" id="inTemp" class="inTemp" style="text-align: center"><br>
+        <div class="radio-toolbar">
+            <input type="radio" id="cel" name="tempType" value="celsius">
+            <label for="cel">&#176;CELSIUS</label>
+            <input type="radio" id="fah" name="tempType" value="farenheit">
+            <label for="fah">&#176;FAHRENHEIT</label>
+        </div>
+        <div class="outTempClass" id="outTempId"></div>
+        <button id="convert">CONVERT</button>
+        <button id="clear">CLEAR INPUT</button>
+    <!-- </form> -->
+<script src="converter.js"></script>
 </body>
 </html>

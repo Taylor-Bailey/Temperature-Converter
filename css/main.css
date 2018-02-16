@@ -3,7 +3,8 @@
     font-family: "Caviar Dreams";
     src: url("css/fonts/CAVIARDREAMS.TTF");
 }
-body {
+
+#body {
     text-align: center;
     margin: 0;
     font-family: "Caviar Dreams";
@@ -12,6 +13,23 @@ body {
     overflow: hidden; 
 }
 
+#body2{
+    text-align: center;
+    margin: 0;
+    font-family: "Caviar Dreams";
+    background-image: url(../cold.png);
+    background-size: cover;
+    overflow: hidden;
+}
+
+#body3 {
+    text-align: center;
+    margin: 0;
+    font-family: "Caviar Dreams";
+    background-image: url(../hot.png);
+    background-size: cover;
+    overflow: hidden;
+}
 
 h1 {
     color: rgb(0, 255, 225);
@@ -22,11 +40,11 @@ h1 {
 }
 
 /* input/output fields */
-#outputTemp, #enterTemp {
+.outTempClass, .inTemp {
     background-color: rgba(245, 245, 245,.75);
     border: 2px solid #ff0055;
     border-radius: 10px;
-    height: 125px;
+    height: 101.6px;
     width: 90%;
     margin: 20px auto;
     padding: 4px 11px;
@@ -44,12 +62,57 @@ input[type="number"] {
     font-family: "Caviar Dreams";
 }
 
+.greenAF {
+    background-color: rgba(245, 245, 245,.75);
+    border: 2px solid #ff0055;
+    border-radius: 10px;
+    height: 125px;
+    width: 90%;
+    margin: 20px auto;
+    padding: 4px 11px;
+    font-weight: bold;
+    font-size: 80px;
+    color: rgb(0, 255, 225);
+    text-shadow: 2px 6px rgb(0, 96, 66);
+    font-family: "Caviar Dreams";
+}
+
+.redAF {
+    background-color: rgba(245, 245, 245,.75);
+    border: 2px solid #ff0055;
+    border-radius: 10px;
+    height: 125px;
+    width: 90%;
+    margin: 20px auto;
+    padding: 4px 11px;
+    font-weight: bold;
+    font-size: 80px;
+    color: #ff0055;
+    text-shadow: 2px 6px rgb(96, 0, 56);
+    font-family: "Caviar Dreams";
+}
+
+.blueAF {
+    background-color: rgba(245, 245, 245,.75);
+    border: 2px solid #ff0055;
+    border-radius: 10px;
+    height: 125px;
+    width: 90%;
+    margin: 20px auto;
+    padding: 4px 11px;
+    font-weight: bold;
+    font-size: 80px;
+    color: #004cff;
+    text-shadow: 2px 6px rgb(35, 0, 96);
+    font-family: "Caviar Dreams";
+}
+
 /* celius/farenheit buttons */
 .radio-toolbar input[type="radio"] {
     display: none;
-  }
+}
   
-  .radio-toolbar label {
+.radio-toolbar label {
     display: inline-block;
     border: 2px solid #ff0055;
     border-radius: 10px;
@@ -65,20 +128,20 @@ input[type="number"] {
     font-family: "Caviar Dreams";
     font-weight: bold;
     transition: .2s ease-out;
-  }
+}
   
-  .radio-toolbar input[type="radio"]:checked+label {
+.radio-toolbar input[type="radio"]:checked+label {
     background-color: rgba(255, 0, 85,.8);
     border-color: rgb(0, 255, 225);
     color: rgb(0, 255, 225);
-    text-shadow: 1px 3px whitesmoke;
+    text-shadow: 2px 6px rgb(96, 0, 56);
     font-family: "Caviar Dreams";
     font-weight: bold;
     transition: .2s ease-in;
-  }
+}
 
 /* clear/display buttons */
-#clear, #display {
+#clear, #convert {
     background-color:  rgba(245, 245, 245,.75);
     border: 2px solid #ff0055;
     border-radius: 10px;
@@ -94,10 +157,13 @@ input[type="number"] {
     transition: .1s ease-out;
 }
 
-#clear:active, #display:active {
+#clear:active, #convert:active {
     background-color: rgba(255, 0, 85,.8);
     border-color: rgb(0, 255, 225);
     color: whitesmoke;
     text-shadow: 1px 3px rgb(0, 255, 225);
 }
 
+input:focus, select:focus, textarea:focus, button:focus {
+    outline: none;
+}
