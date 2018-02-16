@@ -1,6 +1,6 @@
 console.log("temperature converter: ENGAGED");
 let inTemp = document.getElementById("inTemp");
-let outTempClass = document.getElementsByClassName("outTempClass");
+// let outTempId. = document.getElementsByClassName("outTempId.");
 let outTempId = document.getElementById("outTempId");
 let celsius = document.getElementById("cel");
 let fahrenheit = document.getElementById("fah");
@@ -27,20 +27,25 @@ function toCelsius() {
   outTempId.innerHTML = `${convertC.toFixed()} &#176;C`;
   console.log("Celsius Conversion Engaged: ", convertC.toFixed());
   if(convertC > 32 &&  convertC <= 141700000000000000000000000000000){ //above 32 degrees C but below planck temp
-    outTempClass.className = "redAF";
+    outTempId.id= "redAF";
     body.idName = "body";
+    message.innerHTML = "TOO HOT TO TOUCH-A MY SPAGHET!"
   }else if(convertC < 0 && convertC > -273.15){ //below freezing but above absolute zero
-    outTempClass.className = "blueAF";
-    body.idName = "body";
+    outTempId.id = "blueAF";
+    body.id = "body";
+    message.innerHTML = "TOO COLD TO TOUCH-A MY SPAGHET!"
   }else if(convertC <= 32 && convertC >= 0){ //goldylocks zone
-    outTempClass.className = "greenAF";
-    body.idName = "body";
+    outTempId.id = "greenAF";
+    body.id = "body";
+    message.innerHTML = "SOMEBODY TOUCH-A MY SPAGHET!"
   }else if(convertC < -273.15){ //at or below absolute zero
-    outTempClass.className = "blueAF";
-    body.idName = "body2";
+    outTempId.id = "coldAF";
+    body.id = "body2";
+    message.innerHTML = "THAT-A SPAGHET IS-A IMPOSSIBLE!";
   }else if(convertC >= 141700000000000000000000000000000){ //at or above planck
-    outTempClass.className = "redAF";
-    body.idName = "body3";
+    outTempId.id = "hotAF";
+    body.id = "body3";
+    message.innerHTML = "THAT-A SPAGHET IS-A IMPOSSIBLE!";
   }
 };
 
@@ -48,20 +53,25 @@ function toFahrenheit() {
   let convertF = (inTemp.value * 1.8) + 32;
   outTempId.innerHTML = `${convertF.toFixed()} &#176;F`;
   if(convertF > 90 && convertF <= 25500000000000000000000000000000){ //higher than 90 degrees but below planck temp
-    outTempClass.className = "redAF";
-    body.idName = "body";
+    outTempId.id = "redAF";
+    body.id = "body";
+    message.innerHTML = "TOO HOT TO TOUCH-A MY SPAGHET!"
   }else if(convertF < 32 && convertF > -459.67){ //below freezing but above absolute zero
-    outTempClass.className = "blueAF";
-    body.idName = "body";
+    outTempId.id = "blueAF";
+    body.id = "body";
+    message.innerHTML = "TOO COLD TO TOUCH-A MY SPAGHET!"
   }else if(convertF <= 90 && convertF >= 32){ // goldylocks zone
-    outTempClass.className = "greenAF";
-    body.idName = "body";
+    outTempId.id = "greenAF";
+    body.id = "body";
+    message.innerHTML = "SOMEBODY TOUCH-A MY SPAGHET!"
   }else if(convertF <= -459.67){ //at or below absolute zero
-    outTempClass.className = "blueAF";
-    body.idName = "body2";
+    outTempId.id = "coldAF";
+    body.id = "body2";
+    message.innerHTML = "THAT-A SPAGHET IS-A IMPOSSIBLE!";
   }else if(convertF >= 25500000000000000000000000000000){ //at or above planck
-    outTempClass.className = "redAF";
-    body.idName = "body3";
+    outTempId.id = "hotAF";
+    body.id = "body3";
+    message.innerHTML = "THAT-A SPAGHET IS-A IMPOSSIBLE!";
   }
 };
 
@@ -85,7 +95,7 @@ convert.addEventListener("click", checkTemp);
 //clear input/output field
 removeMessage = () => {
     inTemp.value = "";
-    outTempClass.className = "outTempClass";
+    outTempId.id = "outTempId";
     outTempId.innerHTML = "";
 }
 clear.addEventListener("click", removeMessage);
