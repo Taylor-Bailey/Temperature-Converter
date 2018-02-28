@@ -10,9 +10,9 @@ let body = document.getElementById("body");
 
 // Add an event handler to the input field that checks if the user pressed the enter key, and if that happens, perform the conversion.
 body.addEventListener("keydown", function pressEnter(keyEvent){
-  console.log("pressed Enter", keyEvent);
+  // console.log("pressed Enter", keyEvent);
   if (keyEvent.keyCode === 13) {
-  console.log("the enter key work");
+  // console.log("the enter key work");
   checkTemp(event);
   }
 });
@@ -80,11 +80,11 @@ function checkTemp(event) {
   console.log("checked temp enganged");
   if(celsius.checked === true) {
     event.preventDefault();
-    toCelsius();  
+    toFahrenheit();  
     console.log("celsius check enganged");
   }else if(fahrenheit.checked === true){
     event.preventDefault();
-    toFahrenheit();
+    toCelsius();
     console.log("fahrenheit check enganged");
   }
 };
@@ -100,3 +100,4 @@ removeMessage = () => {
 }
 clear.addEventListener("click", removeMessage);
   
+ 
